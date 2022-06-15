@@ -13,10 +13,10 @@ function moveDodgerLeft() {
     }
   })
   function moveDodgerRight() {
-    let RightNumbers = dodger.style.left.replace('', 'px');
-    let right = parseInt(RightNumbers, 10)
+    let RightNumbers = dodger.style.right.replace();
+    let right = parseInt( 10,RightNumbers)
     if (right > 0) {
-      dodger.style.right = `${right-1}px`
+      dodger.right = `${right-1}px`
     }
   }
 
