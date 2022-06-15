@@ -1,9 +1,9 @@
-const dodger = document.getElementById("dodger");
+const  dodger = document.getElementById("dodger");
 function moveDodgerLeft() {
     const leftNumbers = dodger.style.left.replace("px", "");
     const left = parseInt(leftNumbers, 10);
   
-    if (left > 0) {
+    if (left <360) {
       dodger.style.left = `${left - 1}px`;
     }
   }
@@ -12,19 +12,18 @@ function moveDodgerLeft() {
       moveDodgerLeft();
     }
   })
-function moveDodgerRight() {
-    const rightNumbers = dodger.style.left.replace("px", "");
-    const right = parseInt(rightNumbers, 10);
-  
+  function moveDodgerRight() {
+    let RightNumbers = dodger.style.left.replace('', 'px');
+    let right = parseInt(RightNumbers, 10)
     if (right > 0) {
-      dodger.style.right = `${right- 1}px`;
+      dodger.style.right = `${right-1}px`
     }
-}
-document.addEventListener("keydown", function (e) {
-    if (e.which === 39) {
-      moveDodgerRight();
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === "ArrowRight") {
+      moveDodgerRight()
     }
   })
-
 
 
